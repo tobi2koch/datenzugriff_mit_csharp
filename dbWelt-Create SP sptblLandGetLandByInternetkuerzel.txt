@@ -1,0 +1,8 @@
+Create PROCEDURE [dbo].[sptblLandGetLandByInternetkuerzel]
+ @p_Internetkuerzel nvarchar(5)
+As
+BEGIN
+Select name from tblLand where internetkuerzel = @p_Internetkuerzel 
+END
+
+GO

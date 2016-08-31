@@ -1,0 +1,14 @@
+Create PROCEDURE [dbo].[sptblLandInsert]
+
+ @p_Land_ID uniqueidentifier,
+ @p_Name nvarchar(50),
+ @p_Einwohnerzahl int,
+ @p_Internetkuerzel nvarchar(5)
+As
+BEGIN
+Insert INTO [dbWelt].[dbo].[tblLand]
+([Land_ID], [Name], [Einwohnerzahl], [Internetkuerzel])
+Values(@p_Land_ID, @p_Name, @p_Einwohnerzahl, @p_Internetkuerzel)
+END
+
+GO
